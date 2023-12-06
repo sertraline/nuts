@@ -3,7 +3,7 @@
 ```console
 apt install nvidia-cuda-toolkit
 apt install build-essential yasm cmake libtool libc6 libc6-dev unzip wget libnuma1 libnuma-dev
-apt install nasm libx264-dev libx265-dev libnuma-dev libvpx-dev libfdk-aac-dev libopus-dev libaom-dev libass-dev libvorbis-dev libvpx-dev libx265-dev libx264-dev
+apt install nasm libx264-dev libx265-dev libnuma-dev libvpx-dev libfdk-aac-dev libopus-dev libaom-dev libass-dev libvorbis-dev libvpx-dev libx265-dev libx264-dev libmp3lame-dev
 
 git clone https://git.videolan.org/git/ffmpeg/nv-codec-headers.git
 cd nv-codec-headers && sudo make install
@@ -20,7 +20,8 @@ cd ffmpeg
 --enable-libvpx \
 --enable-libx264 \
 --enable-libx265 \
---enable-nonfree
+--enable-nonfree \
+--enable-libmp3lame
 
 make -j 8
 make install
