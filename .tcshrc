@@ -1,0 +1,13 @@
+alias cwdcmd 'printf "\033]1;%s\007\033]2;%s\007" "$cwd:t" "$HOST echo $cwd | sed s-$HOME-~-" '
+
+set autoexpand
+bindkey '^R' i-search-back
+set filec
+set autolist
+set prompt="%{\e[37m%}@%{\e[32m%}%m%{\e[37m%}:%{\e[37m%}%~%{\e[37m%}"\>"%{\e[0m%} "
+
+
+alias sql "cd ~/sciup/sql"
+alias model "cd ~/sciup/www/application/classes/model"
+alias classes "cd ~/sciup/www/application/classes"
+alias config "cd ~/sciup/www/application/config_dev"
